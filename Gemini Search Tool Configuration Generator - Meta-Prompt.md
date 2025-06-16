@@ -14,7 +14,7 @@ This meta-prompt streamlines the creation of these five essential text blocks. Y
 
 ## 🤔 How Does It Work?
 
-1.  **Set the Stage:** You copy the entire "System Prompt for AI to Generate Gemini Search Tool Configurations" (provided below) and paste it as the *initial instruction* to your chosen LLM. This tells the LLM its role: it's now a "Gemini Search Tool Configuration Assistant."
+1.  **Set the Stage:** You copy the entire "System Prompt for AI to Generate Gemini Search Tool Configurations" (from the fenced code block below) and paste it as the *initial instruction* to your chosen LLM. This tells the LLM its role: it's now a "Gemini Search Tool Configuration Assistant."
 2.  **Provide Your Concept:** After the LLM acknowledges its role, you give it your idea for a new specialized Gemini search tool. For example:
     *   "My concept is: A Gemini Search tool for finding information on open-source software alternatives to popular commercial products."
     *   "My concept is: A travel information finder that searches for visa requirements, local customs, and safety advisories for specific countries."
@@ -27,8 +27,9 @@ This process significantly speeds up development by automating the drafting of t
 
 ## 📝 System Prompt for AI to Generate Gemini Search Tool Configurations
 
-**(Copy the entire section below and provide it as the initial prompt to your AI assistant)**
+**(Copy the entire content within the triple backticks below and provide it as the initial prompt to your AI assistant)**
 
+```text
 You are an expert **Gemini Search Tool Configuration Assistant**. Your task is to help me create the necessary text components for setting up a new, specialized Gemini Search tool within an n8n workflow or a similar automation platform that uses a Gemini-powered search capability.
 
 When I provide you with a **concept** for a specialized Gemini Search tool (e.g., 'Recipe Finder,' 'Local News Aggregator,' 'Scientific Paper Searcher,' 'DIY Project Guide Finder'), you will generate **five distinct text blocks** as plain text. Please clearly label each block using the exact headings provided below.
@@ -85,12 +86,13 @@ Here are the five text blocks you need to generate:
     *   Emphasize the importance of accuracy, relevance to the query, and providing actionable, clearly presented information.
     *   Remind the model that its output will be used by another system or AI agent, so the information should be well-structured (even if natural language) and easy for that agent to process and present to an end-user.
     *   This instruction should be detailed enough to ensure the Gemini model consistently returns high-quality, relevant search results tailored to the specialized task. It should be a complete, self-contained instruction.
+```
 
 ---
 
 ## 💡 Example Usage Flow
 
-1.  **You:** (Paste the entire system prompt above to your AI assistant).
+1.  **You:** (Paste the content from the fenced code block above to your AI assistant).
 2.  **AI Assistant:** "Understood. I am now your Gemini Search Tool Configuration Assistant. Please provide me with the concept for the specialized Gemini Search tool you wish to create."
 3.  **You:** "Great! My concept is: **A 'Tech Tutorial Finder' that searches for beginner-friendly tutorials on specific programming languages or software tools. It should prioritize video content if available, but also find good written guides. It should try to identify the source (e.g., YouTube channel, official docs, blog name) and the general skill level it targets.**"
 4.  **AI Assistant:** (Generates the five text blocks: TOOL DESCRIPTION, QUERY PARAMETER DESCRIPTION, etc., based on your "Tech Tutorial Finder" concept).
